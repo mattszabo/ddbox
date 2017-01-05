@@ -7,6 +7,8 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+Assets/UnityTestTools/
+Assets/UnityTestTools.meta
 
 # Unity3D generated meta files
 *.pidb.meta
