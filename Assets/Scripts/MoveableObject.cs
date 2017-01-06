@@ -64,7 +64,7 @@ public class MoveableObject : MonoBehaviour {
 	}
 
 	public void CheckForThrownObject() {
-		if (transform.position.y > 0.5) {
+		if (transform.position.y > 0.6) {
 			isThrown = true;
 		}
 	}
@@ -75,8 +75,13 @@ public class MoveableObject : MonoBehaviour {
 	}
 
 	public void ThrowObject() {
+		float velocityMultiplier = 2.0f;
 		Rigidbody rb = GetComponent<Rigidbody> ();
-		rb.AddForce (objectVelocity.x, objectVelocity.y, objectVelocity.z, ForceMode.Force);
+		rb.AddForce (
+			objectVelocity.x * velocityMultiplier,
+			objectVelocity.y * velocityMultiplier,
+			objectVelocity.z * velocityMultiplier,
+			ForceMode.Force);
 
 		isThrown = false;
 	}
